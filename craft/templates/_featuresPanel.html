@@ -9,6 +9,8 @@
 <div class="zig-zag container">
     <div class="row">
 
+    {% if loop.index is not divisibleby(2) %}
+
     <div class="col-md-6">
         <img src='{{featureImage}}' class="serv" alt="{{entry.title}}" />
     </div><!--end col-md-7-->
@@ -21,6 +23,20 @@
     
     </div><!--end row-->
 </div><!--end zig-zag-->
+
+ {% else %}
+
+<div class="col-md-5">
+    <h2>{{entry.title}}</h2>
+    <p>{{entry.body}}
+    </p>
+</div><!--end col-md-5-->
+
+<div class="col-md-6 col-md-offset-1">
+    <img src='{{featureImage}}' class="serv" alt="{{entry.title}}" />
+</div><!--end col-md-7-->
+
+ {% endif %}
 
 {% endfor %}
 

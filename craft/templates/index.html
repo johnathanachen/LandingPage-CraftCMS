@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>Flexible - responsive multi-purpose one page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=9, IE=edge" />
-  <meta name='robots' content='noindex,follow' />
+{% extends "_layout" %}
 
-  <link rel='stylesheet' id='bootstrap-css'  href='assets/css/bootstrap.min.css?ver=4.4.1' type='text/css' media='screen' />
-  <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700&subset=latin,devanagari,latin-ext' rel='stylesheet' type='text/css'>
-  <link rel='stylesheet' id='fontawesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?ver=4.4.1' type='text/css' media='all' />
-  <link rel='stylesheet' id='style-css'  href='assets/css/style.css' type='text/css' media='all' />
-     
-</head>
-  
-<body>
+{% block content %}
 
-  <p>Hello Craft CMS</p>
+  {% include '_heroPanel.html' %}
 
-</body>
-
-</html>
+{% endblock %}

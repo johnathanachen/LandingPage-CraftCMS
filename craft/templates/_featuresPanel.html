@@ -1,0 +1,27 @@
+<section id="features">
+{% for entry in craft.entries.section('homePanels').type('feature') %}
+
+{% set featureImage = "" %}
+{% for asset in entry.featureImage %}
+	{% set featureImage = asset.url %}
+{% endfor %}
+
+<div class="zig-zag container">
+    <div class="row">
+
+    <div class="col-md-6">
+        <img src='{{featureImage}}' class="serv" alt="{{entry.title}}" />
+    </div><!--end col-md-7-->
+    
+    <div class="col-md-5 col-md-push-1">
+        <h2>{{entry.title}}</h2>
+        <p>{{entry.body}}
+        </p>
+    </div><!--end col-md-5-->
+    
+    </div><!--end row-->
+</div><!--end zig-zag-->
+
+{% endfor %}
+
+</section>

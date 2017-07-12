@@ -9,6 +9,6 @@
 
 return array(
 	'environmentVariables' => array(
-		'baseUrl' => '//localhost:8888/',
+		'baseUrl' => '',
 	),
 );
